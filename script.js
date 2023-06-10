@@ -1,7 +1,7 @@
 //your JS code here. If required.
 function playSound(event) {
       const keyCode = event.keyCode || event.which;
-      const keyElement = document.querySelector(`.key[data-key="${keyCode}"]`);
+      const keyElement = document.querySelector(`.keys[data-key="${keyCode}"]`);
       if (!keyElement) return; // Ignore unrecognized keys
 
       const audioElement = document.querySelector(`audio[data-key="${keyCode}"]`);
@@ -17,7 +17,7 @@ function playSound(event) {
       this.classList.remove('playing');
     }
 
-    const keys = Array.from(document.querySelectorAll('.key'));
+    const keys = Array.from(document.querySelectorAll('.keys'));
     keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
     window.addEventListener('keydown', playSound);
     
