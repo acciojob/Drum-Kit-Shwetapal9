@@ -2,10 +2,10 @@
 function playSound(event) {
       const keyCode = event.keyCode;
       const keyElement = document.querySelector(`.key[data-key="${keyCode}"]`);
-      if (!keyElement) return; // Ignore unrecognized keys
+      if (!keyElement) return;
 
       const audioElement = document.querySelector(`audio[data-key="${keyCode}"]`);
-      if (!audioElement) return; // Ignore keys without associated audio
+      if (!audioElement) return; 
 
       audioElement.currentTime = 0; // Rewind audio to the start
       audioElement.play();
@@ -13,7 +13,7 @@ function playSound(event) {
     }
 
     function removeTransition(event) {
-      if (event.propertyName !== 'transform') return; // Skip if it's not a transform-related transition
+      if (event.propertyName !== 'transform') return; 
       this.classList.remove('playing');
     }
 
