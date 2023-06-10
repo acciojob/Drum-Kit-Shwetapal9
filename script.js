@@ -1,6 +1,6 @@
 //your JS code here. If required.
 function playSound(event) {
-      const keyCode = event.keyCode || event.which;
+      const keyCode = event.keyCode;
       const keyElement = document.querySelector(`.key[data-key="${keyCode}"]`);
       if (!keyElement) return; // Ignore unrecognized keys
 
