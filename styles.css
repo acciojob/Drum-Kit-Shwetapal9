@@ -1,1 +1,10 @@
 /*  your css code here. If applicable */
+.key {
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+      background-color: lightgray;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
